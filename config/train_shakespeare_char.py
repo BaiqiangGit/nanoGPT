@@ -1,5 +1,7 @@
 # train a miniature character-level shakespeare model
 # good for debugging and playing on macbooks and such
+import torch._dynamo
+torch._dynamo.config.suppress_errors = True
 
 out_dir = 'out-shakespeare-char'
 eval_interval = 250 # keep frequent because we'll overfit

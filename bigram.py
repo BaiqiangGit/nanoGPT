@@ -1,4 +1,4 @@
-## 勤于动手：眼熟，手熟，心熟，脑熟
+
 ## replicated from karpathy's bigram.py
 
 import torch
@@ -118,6 +118,6 @@ for iter in range(max_iters):
     optimizer.step()
 
 # generate from the model
-context = torch.zeros((1,1), dtype=torch.long, device=device)
+context = torch.zeros((2,1), dtype=torch.long, device=device)
 print('----------')
-print(decode(m.generate(context, max_new_token=500)[0].tolist()))
+print(decode(m.generate(context, max_new_token=500)[0].tolist())) # [0] as we have only one 
